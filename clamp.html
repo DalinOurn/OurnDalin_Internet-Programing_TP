@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAMP</title>
+    <style>
+       .wrapper{
+           width: 100%;
+           height: 90vh;
+           background-color: burlywood;
+       }
+       .content{
+            width: clamp(300px 100% 800px);
+            height: 70%;
+            background-color: cadetblue;
+            position: relative;
+            top: 15px;
+            padding-top: 10px;
+            margin-left: 40px;
+            margin-right: 40px;
+       }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content"></div>
+    </div>
+</body>
+</html>

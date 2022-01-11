@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Image</title>
+    <style>
+        body {
+            background-color: rgba(97, 105, 122, 0.5);
+        }
+        
+        #canvas {
+            border: 10px solid rgba(37, 57, 83, 0.7);
+            border-top: 5px solid rgba(37, 57, 83, 0.7);
+            background-color: whitesmoke;
+        }
+        
+        .upload {
+            background-color: rgba(83, 147, 231, 0.582);
+            width: 520px;
+        }
+        
+        .upload>span {
+            color: #fafafa;
+        }
+        
+        .upload>div>input {
+            color: #fafafa;
+            border: 2px solid rgba(247, 248, 250, 0.5);
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <canvas width="550" height="550" id="canvas"></canvas>
+        <div class="upload">
+            <span>Canvas 🤑 : Insert me an image please!</span>
+            <div>
+                <input type="file" id="fileinput" accept="image/*" />​
+                
+            </div>
+        </div>
+    </center>
+    <script>
+        let fileInput = document.getElementById("fileinput").addEventListener("change", function(event) {
+            if (event.target.files) {
+                let file = event.target.files[0]; 
+                console.log(file);
+
+                var reader = new FileReader();
+                reader.readAsDataURL(file); 
+                reader.onloadend = function(event) {
+                    var image = new Image();
+                    image.src = event.target.result;
+
+                    image.onload = function() {
+                        var canvas = document.getElementById("canvas");
+                        canvas.width = image.width;
+                        canvas.height = image.height;
+                        var ctx = canvas.getContext('2d');
+                        console.log(image.width);
+                        console.log(image.height);
+
+                        ctx.drawImage(image, 0, 0);
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

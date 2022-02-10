@@ -1,0 +1,102 @@
+body{
+    padding: 0;
+    margin: 0;
+   
+}
+
+    .Container
+    {
+        width:50%;
+        height: 100vh;
+        background-color: rgb(221, 220, 220);
+        padding: 0;
+        margin: 0;
+        position: relative;
+       
+    }
+    .Container #more
+    {
+        right: 10px;
+        position: absolute;
+        cursor: pointer;
+            
+    }
+    
+    #click
+    {
+        display: none;
+    }
+    #click1
+    {
+        display: none;
+    }
+    h3
+    {
+        display: none;
+    }
+    ul li
+    {
+        display: none;
+    }
+
+    .menu_bar
+    {
+        width:25%;
+        height: 80%;
+        background-color: rgb(255, 255, 255);
+        margin-left: 30px;
+        position: absolute;
+        transition: all 0.5s;
+        left: -100%;
+        position: relative;
+         
+    }
+    .menu_bar #cancel
+    {
+       margin-left: 300px;
+       position: absolute;
+    }
+    #click:checked ~ .menu_bar {
+        left: 0%;
+        position: relative;
+    }
+    #click:checked ~ label #more {
+        display: none;
+    }
+    
+    h3
+    {
+        display: inline;
+        margin-left:30px;
+        position: absolute;
+        color: rgb(64, 125, 238);
+        
+    }
+    .manu
+    {
+     position: absolute;
+     display: block;
+    }
+    nav ul
+    {
+       list-style: none;
+       position: absolute;
+    }
+    nav ul li{
+        display: block;
+        margin: 70px 350px -50px 0;
+        /* background-color: rgba(255, 0, 0, 0.479); */
+        text-align: center;
+        padding: 10px;
+    }
+    nav ul li a 
+    {
+        text-decoration: none;
+        
+    }
+    nav ul li a:hover
+    {
+        color: white;
+    }
+  
+

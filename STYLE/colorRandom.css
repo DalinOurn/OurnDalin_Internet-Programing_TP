@@ -1,0 +1,47 @@
+
+.background
+{
+   width: 400px;
+   height: 550px;
+   background-color: rgb(135, 201, 240);
+   position: relative;
+   left: 30%;
+   padding-top: 10px;
+}
+.text
+{
+    display: block;
+    text-align: center;
+    background-color: darksalmon;
+    height: 100px;
+    padding-top: 10px;
+    
+}
+
+.button 
+{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 20%;
+}
+.button button
+{
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: gray;
+    font-size: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+#input{
+    width: 393px;
+    height: 15px;
+    border: white;
+}
+#record_code
+{
+    background-color: white;
+    margin-top: 50%;
+    
+}
